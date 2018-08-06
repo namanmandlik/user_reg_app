@@ -1,0 +1,102 @@
+<ng-container>
+    <form ngNativeValidate class="form-group intro-body">
+        <div class="form-group col-5"> 
+            <label for="state">State</label><br>
+            <input required type="text" id="state" name="state" class="form-control" [(ngModel)]="userDetails.state"/>
+        </div>
+        <div class="border-bottom mb-3"></div>
+        <div class="form-group col-5"> 
+                <label for="age">Age</label><br>
+                <input required type="number" id="age" name="age" max="120" class="form-control" [(ngModel)]="userDetails.age"/>
+        </div>
+        <div class="border-bottom mb-3"></div>
+        <div class="form-group"> 
+            <label class="col-5" for="ethnicity">Ethnicity</label><br>
+        
+            <div class="col-10 custom-radio-group">
+                <label class="radio-inline">
+                <input type="radio" id="hispanicLatino" name="hispanicLatino" value="0" [(ngModel)]="userDetails.ethnicity"/>
+                Hispanic or Latino
+                </label>
+
+                <label class="radio-inline">
+                <input type="radio" class="" id="nonHispanicLatino" name="nonHispanicLatino" value="1" [(ngModel)]="userDetails.ethnicity"/>
+                Non-Hispanic or Non-Latino</label>
+            </div>
+       
+        </div> 
+        <div class="border-bottom mb-3"></div>  
+        <div class="form-group"> 
+                <label class="col-5" for="race">Race</label><br>
+
+                <div class="col-10 custom-radio-group" id="race">
+        
+                    <label class="radio-inline">
+                        <input type="radio" id="americanIndian" name="americanIndian" value="0" [(ngModel)]="userDetails.race">
+                        American Indian
+                    </label>
+
+                    <label class="radio-inline">
+                        <input type="radio" id="asian" name="asian" value="1" [(ngModel)]="userDetails.race">
+                        Asian
+                    </label>
+
+                    <label class="radio-inline">
+                        <input type="radio" id="nativeHavianPacific" name="nativeHavianPacific" value="2" [(ngModel)]="userDetails.race">
+                        Native Hawaiin or Other Pacific Islander
+                    </label>
+
+                    <label class="radio-inline">
+                        <input type="radio" id="africanAmerican" name="africanAmerican" value="3" [(ngModel)]="userDetails.race"/>
+                        Black or African American
+                    </label>
+
+                    <label class="radio-inline">
+                        <input type="radio" id="white" name="white" value="4" [(ngModel)]="userDetails.race">
+                        White
+                    </label>
+
+                </div>
+            </div> 
+        <div class="border-bottom mb-3"></div>
+        <div class="form-group"> 
+            <label for="sex" class="col-5">Sex</label><br>
+        
+            <div class="col-10 custom-radio-group" id="sex">
+            
+                <label class="radio-inline">
+                    <input type="radio" id="male" name="male" value="0" [(ngModel)]="userDetails.sex"/>
+                    Male
+                </label>
+                <label class="radio-inline">
+                <input type="radio" class="" id="female" name="female" value="1" [(ngModel)]="userDetails.sex"/>
+                    Female
+                </label>
+            </div>
+        </div> 
+        <div class="border-bottom mb-3"></div>
+        <div class="form-group input-group col-5"> 
+                <label for="height">Height</label><br>
+                <div class="input-group">
+                    <input required type="number" id="height" name="height" max="120" class="form-control" [(ngModel)]="userDetails.height"/>
+                    <div class="input-group-append">
+                        <span class="input-group-text" id="inches">In inches</span>
+                    </div>  
+                </div>
+        </div>
+        <div class="border-bottom mb-3"></div>
+        <div class="form-group col-5"> 
+            <label for="weight">Weight</label><br>
+            <div class="input-group" id="weight">
+                <input required type="number" id="weight" name="weight" max="250" class="form-control" [(ngModel)]="userDetails.weight"/>
+                <div class="input-group-append">
+                        <span class="input-group-text" id="pounds">In pounds</span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group col-10 custom-btn">
+            <button type="submit" name="proceed" class="btn btn-primary" (click)="onSubmit()">Proceed</button>
+        </div>
+        <div class="border-bottom mb-3"></div>  
+    </form>
+</ng-container>

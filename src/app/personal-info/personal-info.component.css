@@ -1,0 +1,18 @@
+.info-body{
+    padding: 5%;
+    padding-bottom: 0%;
+    padding-right:0%;
+}
+
+.name-input{
+    margin-left: 2em;
+    transform: translateY(10px);
+}
+
+.user-image > input{
+    display: none;
+}
+
+.custom-btn{
+    margin-left:40%;
+}

@@ -1,0 +1,19 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome!
+  </h1>
+</div>
+<div>
+  <tabset>
+      <tab heading="Introduction" customClass="ml-5" [active]="tabIntroActive">
+        <introduction (userIntroSubmit)="onContinue($event)"></introduction>
+      </tab>
+      <tab heading="Personal Information" [active]="tabInfoActive">
+        <personal-info [userDetails]="userDetails" (userInfoSubmit)="onSubmit($event)"></personal-info>
+      </tab>
+  </tabset>
+  <ng-container *ngIf="showSuccess">
+    <span class="alert alert-success custom-alert">Registration successfull!</span>
+  </ng-container>
+</div>

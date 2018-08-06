@@ -1,0 +1,19 @@
+.intro-body{
+    padding:5%;
+}
+
+.border-bottom{
+    margin-left:1em;
+}
+
+input[type="text"],[type="number"]{
+    background-color:#f5f5f5;
+}
+
+.custom-radio-group label{
+    padding-right: 2em;
+}
+
+.custom-btn{
+    margin-left:40%;
+}
